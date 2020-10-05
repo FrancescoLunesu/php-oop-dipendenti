@@ -1,13 +1,13 @@
 <?php
-require_once '/dipendenti.php';
-require_once '/../traits/calcoloStipendio.php';
+require_once __DIR__ . '/dipendenti.php';
+require_once __DIR__ . '/../traits/calcoloStipendio.php';
 
 class DettaglioDipendenti extends Dipendenti{
+    use CalcoloStipendio;
     protected $Nome;
     protected $Cognome;
     private $CodiceFiscale;
     protected $Iban;
-    use CalcoloStipendio;
 
     public function __construct($_id, $_Nome, $_Cognome, $_Iban){
         parent::__construct($_id);

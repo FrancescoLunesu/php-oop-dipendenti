@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . '/../traits/calcoloStipendio.php';
 
 class Dipendenti{
     public $id;
