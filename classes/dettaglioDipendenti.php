@@ -18,7 +18,7 @@ class DettaglioDipendenti extends Dipendenti{
 
     public function setNome($_Nome){
         if(empty($_Nome)){
-            die("Attenzione! Inserisci il nome del dipendente");
+            throw new Exception("Attenzione! Inserisci il nome del dipendente");
         } else {
             $this->Nome = $_Nome;
         }
@@ -30,7 +30,7 @@ class DettaglioDipendenti extends Dipendenti{
 
     public function setCognome($_Cognome){
         if(empty($_Cognome)){
-            die("Attenzione! Inserisci il cognome del dipendente");
+            throw new Exception("Attenzione! Inserisci il cognome del dipendente");
         } else {
             $this->Cognome = $_Cognome;
         }
@@ -42,7 +42,7 @@ class DettaglioDipendenti extends Dipendenti{
 
     public function setIban($_Iban){
         if(empty($_Iban)){
-            die("Attenzione! Inserisci l'Iban del dipendente");
+            throw new Exception("Attenzione! Inserisci l'Iban del dipendente");
         } else {
             $this->Iban = $_Iban;
         }

@@ -14,9 +14,11 @@ trait CalcoloStipendio{
 
     public function setPaga($_paga){
         if(empty($_paga)){
-            die("Attenzione! Inserisci la paga oraria del dipendente");
+            throw new Exception("Attenzione! Inserisci la paga oraria del dipendente");
+            // die("Attenzione! Inserisci la paga oraria del dipendente");
         } else if ($_paga < 10 || $_paga > 30){
-            die("Attenzione! La paga oraria del dipendente deve essere tra i 10€ e i 30€");
+            throw new Exception("Attenzione! La paga oraria del dipendente deve essere tra i 10€ e i 30€");
+            // die("Attenzione! La paga oraria del dipendente deve essere tra i 10€ e i 30€");
         } else {
             $this->paga = $_paga;
         }
@@ -28,7 +30,7 @@ trait CalcoloStipendio{
 
     public function setOreSettimanali($_OreSettimanali){
         if(empty($_OreSettimanali)){
-            die("Attenzione! Inserisci le ore settimanali");
+            throw new Exception("Attenzione! Inserisci le ore settimanali del dipendente");
         } else {
             $this->OreSettimanali = $_OreSettimanali;
         }

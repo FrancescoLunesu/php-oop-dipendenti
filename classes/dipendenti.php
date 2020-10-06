@@ -11,7 +11,7 @@ class Dipendenti{
 
     public function setId($_id){
         if(empty($_id)){
-            die("Attenzione! Inserisci l'identificativo del dipendente");
+            throw new Exception("Attenzione! Inserisci l'identificativo del dipendente");
         } else {
             $this->id = $_id;
         }
